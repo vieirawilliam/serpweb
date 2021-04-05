@@ -1,0 +1,10 @@
+alter table "WARELINE".cadparam add column exercicioid integer;
+
+
+//SCRIPT PARA INSERIR MENU NOVO
+insert into tabmenu (codmenu, nmtela, id_mod, caminho, icone, parent_id, name, path)
+values ('5015','FORMA DE PAGAMENTO','4','/frmconscadformapagamento','','36','FORMA DE PAGAMENTO','/frmconscadformapagamento')
+
+//SCRIPT PARA INSERIR MENU NO USARIO
+insert into menu_usu (codmenu, codusu, incluir, alterar, excluir, consultar, id_tblusu, id_tabmenu)
+values ('5015','104','S','S','S','S','104','51')

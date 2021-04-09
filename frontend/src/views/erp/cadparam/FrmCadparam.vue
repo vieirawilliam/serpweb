@@ -150,6 +150,7 @@ export default {
   },
   data () {
     return {
+      id: '',
       abertconta: [{
         text: 'MESA',
         value: 'M'
@@ -251,7 +252,6 @@ export default {
         }
       },
       dados: {
-        id: '',
         pxcliente: '',
         pxvenda: '',
         pxcompra: '',
@@ -291,7 +291,7 @@ export default {
       if (this.acao === 'editar') {
         this.$store.dispatch('cadparamModule/showParam', this.$route.params.id)
           .then(function (res) {
-            vm.dados.id = res.id
+            vm.id = res.id
             vm.dados.pxcliente = res.pxcliente
             vm.dados.pxvenda = res.pxvenda
             vm.dados.pxcompra = res.pxcompra

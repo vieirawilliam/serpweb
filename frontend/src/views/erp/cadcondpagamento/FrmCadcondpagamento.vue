@@ -93,6 +93,7 @@ export default {
   },
   data () {
     return {
+      id: '',
       tipo: [{
         text: 'RECEBIMENTO',
         value: 'RECEBIMENTO'
@@ -113,7 +114,6 @@ export default {
         tipo: null
       },
       dados: {
-        id: '',
         codcondpag: 0,
         desccondpag: '',
         numeroparcelas: '',
@@ -136,6 +136,7 @@ export default {
       let vm = this
       this.$store.dispatch('cadcondPagamentoModule/showCadcondpag', this.$route.params.id)
         .then(function (res) {
+          vm.id = res.id
           vm.dados.id = res.id
           vm.dados.codcondpag = res.codcondpag
           vm.dados.desccondpag = res.desccondpag

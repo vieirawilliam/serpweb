@@ -25,8 +25,6 @@
               <li class="tabsubmenu60">
                 <a href="#auxiliar" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Auxiliares</a>
                 <ul class="collapse list-unstyled" id="auxiliar">
-                  <li class="tabsubmenu20"><a href="#">Bairro</a></li>
-                  <li class="tabsubmenu20"><a href="#">Município</a></li>
                   <li class="tabsubmenu20"><router-link class="nav-link" to="/frmconscadbanco">Banco</router-link></li>
                   <li class="tabsubmenu20"><a href="#">Grupo</a></li>
                   <li class="tabsubmenu20"><a href="#">SubGrupo</a></li>
@@ -37,19 +35,19 @@
                 </ul>
               </li>
               <li class="tabsubmenu60">
-                <router-link class="nav-link" to="/frmconstblusu">Empresa</router-link>
+                <router-link class="nav-link" to="/">Empresa</router-link>
               </li>
               <li class="tabsubmenu60">
                 <router-link class="nav-link" to="/frmconstblusu">Funcionários</router-link>
               </li>
               <li class="tabsubmenu60">
-                <router-link class="nav-link" to="/frmconstblusu">Produto</router-link>
+                <router-link class="nav-link" to="/">Produto</router-link>
               </li>
               <li class="tabsubmenu60">
-                <router-link class="nav-link" to="/frmconstblusu">Fornecedor</router-link>
+                <router-link class="nav-link" to="/">Fornecedor</router-link>
               </li>
               <li class="tabsubmenu60">
-                <router-link class="nav-link" to="/frmconstblusu">Cliente</router-link>
+                <router-link class="nav-link" to="/">Cliente</router-link>
               </li>
               <li class="tabsubmenu60">
                 <router-link class="nav-link"  to="/Editcadparam/1">Parâmetros</router-link>

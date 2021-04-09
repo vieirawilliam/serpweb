@@ -6,11 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cadbanco extends Model
 {
-    protected $table    = "cadbanco"; 
-    protected $fillable = [     
-    ];
+    protected $table    = "cadbanco";
+    protected $guarded  = [];
     public $timestamps = false;
-
     public static function ListaCadbanco($paginate,$ordem, $asc, $filter, $scond)
     {
 
@@ -46,14 +44,26 @@ class Cadbanco extends Model
     }
     public static function RegraValidacao(){
         $regras = [ // <---
-            'descbanco' => ['required']     
+            'descbanco' => ['required'],
+            'status' => ['required'],
+            'numbanco' => ['required'],
+            'agencia' => ['required'],
+            'conta' => ['required'],
+            'seqboleto' => ['required'],
+            'remessa' => ['required']     
         ];
 
         return $regras;
     }
     public static function MensagensValicacao(){
         $mensagens = [
-            'descbanco.required'=>'Descrição do banco é obrigatório'          
+            'descbanco.required'=>'Descrição do banco é obrigatório',
+            'status.required'=>'Status do banco é obrigatório',
+            'numbanco.required'=>'Número do banco é obrigatório',
+            'agencia.required'=>'Agência do banco é obrigatório',
+            'conta.required'=>'Conta do banco é obrigatório',
+            'seqboleto.required'=>'Número do boleto é obrigatório',
+            'remessa.required'=>'Sequencia da remessa é obrigatório'         
         ];
         return $mensagens;
     }

@@ -172,6 +172,7 @@ export default {
   },
   data () {
     return {
+      id: '',
       situacao: [{
         text: 'ATIVO',
         value: 'ATIVO'
@@ -277,7 +278,6 @@ export default {
         }
       ],
       dados: {
-        id: '',
         usunome: '',
         ususenha: '',
         nome: '',
@@ -331,7 +331,7 @@ export default {
       if (this.acao === 'editar') {
         this.$store.dispatch('tblusuModule/showUsu', this.$route.params.id)
           .then(function (res) {
-            vm.dados.id = res.id
+            vm.id = res.id
             vm.dados.usunome = res.usunome
             vm.dados.ususenha = res.ususenha
             vm.dados.nome = res.nome

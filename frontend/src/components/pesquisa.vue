@@ -117,7 +117,7 @@ export default {
 <style scoped>
   .espaco_esquerda {
     margin-right: 20px !important;
-    border: 1px dolid red;
+    border: 1px solid red;
   }
 
   .form-group .input-group-prepend .input-group-text,

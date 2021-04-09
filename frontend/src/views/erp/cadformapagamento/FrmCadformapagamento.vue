@@ -85,11 +85,11 @@ export default {
   },
   data () {
     return {
+      id: '',
       errors: {
         desccondpag: null
       },
       dados: {
-        id: '',
         codformapag: 0,
         descformapag: '',
         geracontasreceber: 0,
@@ -111,6 +111,7 @@ export default {
       let vm = this
       this.$store.dispatch('cadformaPagamentoModule/showCadformapag', this.$route.params.id)
         .then(function (res) {
+          vm.id = res.id
           vm.dados.id = res.id
           vm.dados.codformapag = res.codformapag
           vm.dados.descformapag = res.descformapag
